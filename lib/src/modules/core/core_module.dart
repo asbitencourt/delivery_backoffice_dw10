@@ -1,0 +1,13 @@
+import 'package:delivery_backoffice_dw10/src/core/rest_client/custom_dio.dart';
+import 'package:delivery_backoffice_dw10/src/storage/session_storage.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+
+import '../../storage/storage.dart';
+
+class CoreModule extends Module {
+  @override
+  List<Bind> get binds => [
+        Bind.lazySingleton<Storage>((i) => SessionStorage(), export: true),
+        Bind.lazySingleton((i) => CustomDio(), export: true),
+      ];
+}
