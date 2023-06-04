@@ -1,5 +1,4 @@
 import 'package:delivery_backoffice_dw10/src/core/ui/helpers/messages.dart';
-import 'package:delivery_backoffice_dw10/src/modules/template/base_layout.dart';
 
 import 'package:flutter/material.dart';
 
@@ -14,8 +13,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> with Loader, Messages {
   @override
   Widget build(BuildContext context) {
-    return BaseLayout(
-        body: Container(
+    return Container(
       child: Container(
           child: Column(
         children: [
@@ -38,6 +36,6 @@ class _HomePageState extends State<HomePage> with Loader, Messages {
               )),
         ],
       )),
-    ));
+    );
   }
 }
